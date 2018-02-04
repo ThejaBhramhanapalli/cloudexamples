@@ -1,0 +1,17 @@
+server:
+  port: 8888
+  context-path: /api
+spring:
+  profiles: default,local
+  jpa.show-sql : true
+  jpa.generate-ddl : true
+  datasource:
+   url : jdbc:postgresql://localhost:5432/test
+   username : postgres
+   password : postgres
+   driverClassName : org.postgresql.Driver
+   testWhileIdle : true
+   validationQuery : SELECT 1
+max:
+ recent:
+  transactions : 10
